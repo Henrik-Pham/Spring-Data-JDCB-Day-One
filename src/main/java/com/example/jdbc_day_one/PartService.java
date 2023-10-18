@@ -1,3 +1,5 @@
+package com.example.jdbc_day_one;
+
 import com.example.jdbc_day_one.model.Part;
 import com.example.jdbc_day_one.repository.PartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,8 +29,9 @@ public class PartService {
         return partRepository.save(part);
     }
 
-    public void deletePart(Part part){
+    public Part deletePart(Part part){
         partRepository.delete(part);
+        return part;
     }
 
     public Part updatePart(Part part){
